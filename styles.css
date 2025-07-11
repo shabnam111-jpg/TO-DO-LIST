@@ -1,0 +1,210 @@
+/* Google Font Fredoka already linked in HTML */
+
+/* General Styling */
+body {
+  font-family: 'Fredoka', cursive;
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1f5fe 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('https://cdn-icons-png.flaticon.com/512/847/847969.png'),
+    url('https://cdn-icons-png.flaticon.com/512/747/747376.png'),
+    url('https://cdn-icons-png.flaticon.com/512/616/616408.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3523/3523063.png'),
+    url('https://cdn-icons-png.flaticon.com/512/1828/1828817.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3448/3448607.png'),
+    url('https://cdn-icons-png.flaticon.com/512/747/747376.png'),
+    url('https://cdn-icons-png.flaticon.com/512/992/992651.png'),
+    url('https://cdn-icons-png.flaticon.com/512/190/190411.png'),
+    url('https://cdn-icons-png.flaticon.com/512/1828/1828911.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2099/2099058.png'),
+    url('https://cdn-icons-png.flaticon.com/512/983/983433.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3405/3405263.png'),
+    url('https://cdn-icons-png.flaticon.com/512/1828/1828906.png'),
+    url('https://cdn-icons-png.flaticon.com/512/190/190406.png'),
+    url('https://cdn-icons-png.flaticon.com/512/1828/1828961.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3524/3524639.png'),
+    url('https://cdn-icons-png.flaticon.com/512/190/190422.png'),
+    url('https://cdn-icons-png.flaticon.com/512/2921/2921222.png'),
+    url('https://cdn-icons-png.flaticon.com/512/3524/3524630.png'),
+    url('https://cdn-icons-png.flaticon.com/512/1687/1687376.png'); /* new unique light bulb icon */
+    
+  background-repeat: no-repeat;
+  background-position: 
+    3% 5%, 10% 15%, 20% 7%, 30% 18%, 40% 5%,
+    50% 20%, 60% 10%, 70% 15%, 80% 5%, 90% 12%,
+    5% 80%, 15% 85%, 25% 75%, 35% 85%, 45% 78%,
+    55% 90%, 65% 88%, 75% 82%, 85% 90%, 95% 85%, 
+    50% 95%;  /* position of new icon - bottom center */
+    
+  background-size: 
+    25px, 30px, 20px, 28px, 24px, 
+    26px, 22px, 30px, 18px, 25px,
+    20px, 30px, 25px, 28px, 22px,
+    26px, 24px, 30px, 20px, 25px,
+    30px; /* size for the new icon */
+    
+  opacity: 0.2;
+  animation: float 30s infinite ease-in-out alternate;
+  z-index: 0;
+}
+
+
+@keyframes float {
+  0% {
+    background-position: 
+      5% 5%, 20% 5%, 35% 5%, 50% 5%, 65% 5%, 80% 5%, 95% 5%,
+      5% 50%, 20% 50%, 35% 50%, 50% 50%, 65% 50%, 80% 50%, 95% 50%,
+      5% 90%, 20% 90%, 35% 90%, 50% 90%, 65% 90%, 80% 90%, 95% 90%;
+  }
+  50% {
+    background-position: 
+      7% 7%, 22% 3%, 33% 7%, 52% 3%, 63% 7%, 82% 3%, 93% 7%,
+      7% 48%, 18% 52%, 37% 48%, 48% 52%, 67% 48%, 78% 52%, 93% 48%,
+      7% 88%, 22% 92%, 33% 88%, 52% 92%, 63% 88%, 82% 92%, 93% 88%;
+  }
+  100% {
+    background-position: 
+      5% 5%, 20% 5%, 35% 5%, 50% 5%, 65% 5%, 80% 5%, 95% 5%,
+      5% 50%, 20% 50%, 35% 50%, 50% 50%, 65% 50%, 80% 50%, 95% 50%,
+      5% 90%, 20% 90%, 35% 90%, 50% 90%, 65% 90%, 80% 90%, 95% 90%;
+  }
+}
+
+/* Glassmorphic Container */
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  animation: popIn 1s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Gradient Heading */
+h1 {
+  text-align: center;
+  font-family: 'Fredoka', cursive;
+  font-size: 36px;
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 50%, #00c896 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Input Box with Blue-Emerald Gradient Border */
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, #00c6ff, #00c896);
+  border-image-slice: 1;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Add Button with Blue-Emerald Gradient */
+button {
+  padding: 12px 18px;
+  border: none;
+  background: linear-gradient(135deg, #00c6ff, #00c896);
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,198,255,0.4);
+}
+
+/* Task List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+li span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Edit & Delete Buttons */
+.actions button {
+  margin-left: 5px;
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.actions button:hover {
+  background-color: #bbb;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 500px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  input[type="text"], button {
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 10px;
+  }
+}
